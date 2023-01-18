@@ -1,0 +1,96 @@
+    
+
+    
+
+    html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var($background-color);
+    color: var($text-color);
+    font-weight: 400;
+    line-height: 1;
+    overflow-x: hidden;
+    transition: var($transition);
+    overscroll-behavior: none;
+}
+
+    * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}   
+
+    $transition: all 0.3s ease-in-out;
+    $text-color: #fafafa;
+    $background-color: #1c1c1e;
+    $filter-background-color: rgba(0, 0, 0, 0.4);
+    $filter-text-color-on-hover: #6e6e6e;
+    $filter-active-color: #2c2c2e;
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EasePack.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@100;200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/aru.css">
+    
+    <header id="home">
+        <div class="text_container">
+            <div class="hey">
+                <h2>Hi, My Name Is</h2>
+                <h3>
+                    Aruobebh Nelson
+                </h3>
+        
+                <h1>
+                    <span class="box"></span>
+                    <span class="hi">And I'm</span>
+                    <span class="text"></span>
+                    <span class="cursor">_</span>
+                </h1>
+            </div>
+        </div>
+    </header>                   
+                    
+                    
+                    <p>
+                        I sit at the intersection of <span>Customer Service</span>, <span>Digital Marketing</span> and <span>Web Development</span> to extract insights and present them in a beautiful and easy-to-understand way that help <span>your business grow</span>.
+                        I'm a success-driven Customer Service Specialist who has experience using <span>HTML, SCSS, Wordpress and Javascript</span> to build beautiful interfaces, web apps, and everything in between.
+                        A passionate person who has high understanding of digital marketing skills like <span>SEO, SEM, Email Marketing, Google Ads, Google Analytics</span> and is willing to learn more technologies to become a better <span>developer / person</span> than I was yesterday.  
+                    </p>
+
+
+    
+    
+// --------------------------------------------- END OF PARALLAX TEXT --------------------------------------------
+
+const words = ["A Customer Service Rep.", "A Digital Marketer.", "A Frontend Developer.", "Your Best Choice!"]
+
+let cursor = gsap.to('.cursor', {opacity: 0, ease:"power2.inOut", repeat: -1})
+
+let boxTl = gsap.timeline()
+
+boxTl.to('.box', {duration: 1, width:"11vw", delay: 0.5, ease: "power4.inOut"})
+.from('.hi', {duration: 1, y:"7vw", ease:"power3.out", onComplete: () => masterTl.play()})
+.to('.box', {duration: 1, height:"7vw", ease:"elastic.out"})
+.to('.box', {duration: 2, autoAlpha: 0.5, yoyo: true, repeat: -1, ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})"})
+
+let masterTl = gsap.timeline({repeat: -1}).pause()
+
+words.forEach(word => {
+    let tl = gsap.timeline({repeat: 1, yoyo: true, repeatDelay: 1})
+    tl.to('.text', {duration: 1.5, text: word})
+    masterTl.add(tl)
+})
+
+The first website I created using HTML and CSS. The design is what you would expect from an absolute beginner like me ( at the time ), regardless, it is my first website and I am proud of it

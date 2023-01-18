@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.hey {
+    color: black;
+    width: auto;
+    height: auto;
+}
+
+h2 {
+    font-size: 4rem;
+    font-family: 'Pacifico', 'Gill Sans';
+}
+
+h1 {
+    position: relative;
+    font-weight: bold;
+    overflow: hidden;
+    font-family: 'Monolisa';
+}
+
+h1 .box {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    background: #2800ad;
+    height: 1vw;
+    z-index: -1;
+}
+
+h1 .hi {
+    display: inline-block;
+}
+
+/* ------------------------------------------------ END OF TYPING ------------------------------------------------ */
+/* 
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(6,15,108);
+    background: linear-gradient(252deg, rgba(6,15,108,1) 0%, rgba(31,11,40,1) 100%);
+    font-family: 'IBM Plex Mono';
+}
+
+.text {
+    position: relative;
+    transform: skewY(345deg) translateY(-200px);
+    animation: animateColor 5s linear infinite;
+}
+
+@keyframes animateColor {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.text h2 {
+    position: relative;
+    width: 100%;
+    font-size: 11em;
+    color: #fff;
+    pointer-events: none;
+    line-height: 1em;
+    white-space: nowrap;
+    text-shadow: calc(var(--x)) 100px 0 rgba(255, 255, 255, 0.1);
+    transform: translateX(calc(0% - var(--x) * var(--i))); 
+}
+
+.text h2 span {
+    color: #0f0;
+    margin: 0 10px;
+}
+
+.text h2 span:nth-child(even) {
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+} */
