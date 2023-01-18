@@ -56,7 +56,7 @@ function resetLinks() {
 
 // --------------------------------------------------------- //
 
-const sendEmail = () => {
+function sendEmail(){
     Email.send({
         Host : "smtp.gmail.com",
         Username : "aruobebhn@gmail.com",
