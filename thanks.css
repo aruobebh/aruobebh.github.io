@@ -4,6 +4,9 @@
     background-color: #ffffff;
     box-shadow: 0.2rem 0.4rem 12rem rgba(0, 0, 0, 0.08);
     padding: 32px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 .text-gradient {
     background: radial-gradient(
@@ -33,6 +36,10 @@ body {
 h1 {
     font-size: 7rem;
     font-family: 'Outfit', sans-serif;
+}
+
+p {
+    font-size: 20px;
 }
 
 a {
