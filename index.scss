@@ -443,7 +443,7 @@ a {
     }
 
     .portfolio__about-intro {
-      font-size: 1.3rem;
+      font-size: 1rem;
       line-height: 1.2;
       width: 100%;
     }
@@ -467,7 +467,7 @@ a {
     }
 
     .portfolio__about-intro {
-      font-size: 1.3rem;
+      font-size: 13px;
       width: 100%;
     }
   }
@@ -588,7 +588,7 @@ a {
             padding: .6rem 0;
     
             a {
-              padding: .5rem 1rem;;
+              padding: .5rem 1rem;
               font-size: 1.4rem;
               
               &:hover {
@@ -644,7 +644,8 @@ a {
             justify-content: space-between;
     
             a {
-              font-size: 1.2rem;
+              padding: .5rem .8rem;
+              font-size: 1rem;
             }
           }
         }
